@@ -12,7 +12,6 @@ class Home extends Component {
 
   render() { 
     const { todoList } = this.props
-    console.log(todoList)
     return ( 
       <div>todoList</div>
     );
