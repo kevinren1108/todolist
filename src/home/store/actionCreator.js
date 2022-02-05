@@ -5,7 +5,7 @@ export const getDataList = () => {
   return (dispatch) => {
     axios.get('https://todolistserver1.herokuapp.com/api/notes')
       .then((res) => {
-        console.log(res)
+        console.log(res.data)
       }
     ).catch(() =>{
       console.log("API offline")
