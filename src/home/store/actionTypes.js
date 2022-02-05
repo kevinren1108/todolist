@@ -1,0 +1,1 @@
+export const UPDATE_DATA_LIST = 'header/UPDATE_DATA_LIST';

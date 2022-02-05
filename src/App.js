@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { PureComponent } from 'react';
+import { Provider } from 'react-redux'
+import { Route, Routes} from 'react-router-dom';
+import GlobalStyles from './globalStyle.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import store from './store/index.js';
+import Home from './home/index.js';
 
+
+class App extends PureComponent {
+  render() { 
+    return ( 
+      <Provider store={store}>
+        <GlobalStyles/>
+        <Routes>
+          <Route path='/' exact element={<Home />}></Route>
+        </Routes>
+      </Provider>
+    );
+  }
+};
+ 
 export default App;
